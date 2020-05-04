@@ -1,0 +1,30 @@
+.post-card{
+	background: #2A2E35;
+   
+	border-radius:	0.75rem!important; 
+	    margin: 0 8px 40px 8px!important;
+    padding: 20px!important;
+}
+
+
+.post-card:hover{
+	transform: translateY(-3px);
+	transition: transform .3s;
+	
+}
+
+a.post-card-image-link:hover{
+	
+	text-decoration: none!important;
+}
+
+body h1, body h2{
+	font-weight: 700;
+	
+	
+}
+
+body{
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji!important;
+	
+}
