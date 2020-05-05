@@ -126,6 +126,8 @@ const Author: React.FC<AuthorTemplateProps> = props => {
           <div css={outer} className="site-header-background no-image">
             <div css={inner}>
               <SiteHeaderContent css={AuthorHeader} className="site-header-content">
+               
+
                 <img
                   style={{ marginTop: '8px' }}
                   css={[AuthorProfileImage, AuthorProfileBioImage]}
@@ -180,8 +182,12 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                       </AuthorSocialLink>
                     )}
                   </div>
+
+                  
                 </AuthHeaderContent>
+              
               </SiteHeaderContent>
+              
             </div>
           </div>
         </header>
@@ -287,6 +293,7 @@ const AuthorHeader = css`
 
     /* no image */
     padding-bottom: 10px;
+    
   }
 `;
 

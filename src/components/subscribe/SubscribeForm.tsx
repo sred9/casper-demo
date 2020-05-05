@@ -12,7 +12,7 @@ export const SubscribeForm: React.FC = () => {
     <form
       noValidate
       css={SubscribeFormStyles}
-      action={config.mailchimpAction}
+      action={config.mailchimpAction} 
       method="post"
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
@@ -69,7 +69,7 @@ const SubscribeEmail = styled.input`
   line-height: 1em;
   font-weight: normal;
   user-select: text;
-  border-radius: 5px;
+  border-radius: 3px;
   transition: border-color 0.15s linear;
 
   -webkit-appearance: none;
@@ -86,7 +86,6 @@ const SubscribeEmail = styled.input`
     color: rgba(255, 255, 255, 0.9);
     /* background: color(var(--darkmode) l(+3%)); */
     background: ${lighten('0.03', colors.darkmode)};
-
     :focus {
       /* border-color: color(var(--darkmode) l(+25%)); */
       border-color: ${lighten('0.25', colors.darkmode)};
@@ -118,15 +117,19 @@ const SubscribeFormButton = styled.button`
     ${saturate('-0.1', lighten('-0.07', colors.blue))} 90%,
     ${saturate('-0.1', lighten('-0.04', colors.blue))}
   ); */
-  background: linear-gradient(#4fb7f0, #29a0e0 60%, #29a0e0 90%, #36a6e2);
-  border-radius: 5px;
+  background-image: linear-gradient(to right,#e052a0,#f15c41);
+
+  /*background: linear-gradient(#4fb7f0, #29a0e0 60%, #29a0e0 90%, #36a6e2);*/
+
+  border-radius: 3px;
 
   -webkit-font-smoothing: subpixel-antialiased;
 
   :active,
-  :focus {
+  :focus, :hover {
     /* background: color(var(--blue) lightness(-9%) saturation(-10%)); */
-    background: ${saturate('-0.1', lighten('-0.09', colors.blue))};
+   /* background: ${saturate('-0.1', lighten('-0.09', colors.blue))};*/
+   background-image: linear-gradient(to right,#3ec7e0,#526bf4);
   }
   @media (max-width: 500px) {
     margin: 10px 0 0 0;

@@ -11,5 +11,9 @@ export const colors = {
   pink: '#fa3a57',
   brown: '#a3821a',
   // darkmode: color(var(--darkgrey) l(+2%)),
-  darkmode: '#12181b',
+  //darkmode: '#12181b',
+ // darkmode: '#131417',
+ darkmode: '#0E2439',
+  //textnormal: '#c7c9d3',
+  textnormal: '#a2b8cd',
 };

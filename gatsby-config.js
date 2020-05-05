@@ -34,6 +34,15 @@ module.exports = {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
               wrapperStyle: 'margin-bottom: 1rem',
+            },   
+          },
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              fromHeading: 2,
+              toHeading: 2
             },
           },
           'gatsby-remark-prismjs',

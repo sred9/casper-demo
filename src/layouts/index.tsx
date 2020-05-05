@@ -484,7 +484,7 @@ const IndexLayout: React.FC<IndexProps> = props => {
 
           @media (prefers-color-scheme: dark) {
             body {
-              color: rgba(255, 255, 255, 0.75);
+              color: ${colors.textnormal};
               background: ${colors.darkmode};
             }
             img {

@@ -194,7 +194,7 @@ const ReadNextCardFooter = styled.footer`
     border: 1px solid rgba(255, 255, 255, 0.6);
     color: rgba(255, 255, 255, 0.6);
     font-size: 1.3rem;
-    border-radius: 999px;
+    border-radius: 4px;
     transition: all 0.35s ease-in-out;
   }
 

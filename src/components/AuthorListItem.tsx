@@ -136,7 +136,7 @@ const AuthorCardStyles = css`
   line-height: 1.5em;
   background: white;
   border-radius: 3px;
-  box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px, rgba(39, 44, 49, 0.06) 1px 3px 8px;
+  box-shadow: 0 0 60px 16px rgba(12,31,49,.5);
   opacity: 0;
   transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transform: scale(0.98) translateY(15px);
@@ -203,12 +203,13 @@ const AuthorCardStyles = css`
 
   @media (prefers-color-scheme: dark) {
     /* background: color(var(--darkmode) l(+4%)); */
-    background: ${lighten('0.04', colors.darkmode)};
-    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.4);
+    background: #274059;
+    box-shadow: 0 0 60px 16px rgba(12,31,49,.5);
 
     :before {
       /* border-top-color: color(var(--darkmode) l(+4%)); */
-      border-top-color: ${lighten('0.04', colors.darkmode)};
+     /* border-top-color: ${lighten('0.04', colors.darkmode)};*/
+     border-top-color: #274059;
     }
   }
 `;

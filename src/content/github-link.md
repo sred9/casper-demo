@@ -5,10 +5,17 @@ image: img/callum-shaw-555357-unsplash.jpg
 author: [Ghost]
 date: 2019-03-10T10:00:00.000Z
 tags:
-  - Source
+  - HTML
 excerpt: Where to find this project on GitHub.
 ---
 
+   ```toc
+# This code block gets replaced with the TOC
+exclude: Table of Contents
+tight: false,
+from-heading: 2
+to-heading: 2
+```
 ## __A few things you should know__
 Find the source of this blog on GitHub - [scttcper/gatsby-casper](https://github.com/scttcper/gatsby-casper)
 

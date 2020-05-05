@@ -1,5 +1,11 @@
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css');
+/*@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap');
 .post-card{
-	background: #2A2E35;
+	/*background: #2A2E35;*/
+	/*background: #2C303A;*/
+	background: #22384E;
    
 	border-radius:	0.75rem!important; 
 	    margin: 0 8px 40px 8px!important;
@@ -19,12 +25,142 @@ a.post-card-image-link:hover{
 }
 
 body h1, body h2{
-	font-weight: 700;
+	font-weight: 500;
 	
 	
 }
 
+
 body{
-	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji!important;
-	
+	font-family: 'Source Sans Pro', sans-serif;
+
+	font-color: #c7c9d3;
 }
+
+strong, b{
+	font-weight: 600!important;
+}
+
+.post-full-header .post-full-custom-excerpt{
+	font-weight: 400;
+}
+.post-full-header .post-full-tags{
+	font-size: 15px;
+}
+
+
+.post-full-content{
+padding: 0 0px 6vw!important;
+}
+
+
+.post-full-tags{
+	font-weight: 500!important;
+
+}
+
+
+
+
+.post-full-header .post-full-title{
+
+	font-size: 4.25rem;
+	padding: 2.1rem 0 0.5rem 0;
+}
+
+.post-full-header .post-full-byline{
+
+	border-bottom: 2px dotted rgba(31,54,77,.6);
+    border-bottom-width: 2px;
+    border-bottom-style: dotted;
+    border-bottom-color: rgba(31, 54, 77, 0.6);
+    border-top: 3px dotted #1f364d;
+    border-top-width: 3px;
+    border-top-style: dotted;
+	border-top-color: rgb(31, 54, 77);
+	
+	padding: 1.35rem 0;
+}
+
+
+.post-full-byline-meta{
+	margin: auto 0!important;
+}
+.post-full-byline-meta a{
+color: #fff;
+font-size: 16px;
+font-weight: 600!important;
+text-transform: lowercase;
+}
+.post-full-header .post-full-title{
+	font-weight: 600!important;
+}
+time.byline-meta-date {
+    font-weight: 600;
+}
+
+.post-sidebar__right{
+padding: 1rem 2rem;
+
+}
+
+.post-sidebar__right a{
+
+	text-transform: uppercase;
+	color: #63809c;
+	font-weight: 600!important;
+
+}
+
+
+.post-sidebar__right a:hover{
+	color: #fff;
+	text-decoration: none;
+
+}
+
+.author-avatar:hover{
+	border: 2px solid #fff;
+
+}
+
+/*
+.site-archive-header{
+	background-color: #1F364D;
+
+}
+*/
+.site-header-content{
+	background: #1F364D;
+	margin: 9rem auto 0!important;
+	width: 100%;
+	padding: 1vw 0 6vw 0;
+	align-items: stretch;
+	border-bottom: 0px!important;
+	border-radius: 4px;
+}
+.css-wumela-outer-SiteNavMain-Author{
+	background: #0E2439!important;
+}
+
+.site-header-background, header.site-archive-header, .css-wumela-outer-SiteNavMain-Author {
+	background: #1F364D!important;
+}
+.author-header-content h1.site-title{
+font-size: 36px;
+margin-bottom: 1rem;
+color: #fff;
+}
+
+.author-header-content h2.author-bio{
+	color: #9cb3c9!important;
+	}
+
+	p.post-footer-content{
+		font-size: 21px;
+		line-height: 36px;
+	}
+
+	p.post-footer-content a{
+		color: #fff;
+	}

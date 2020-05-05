@@ -177,22 +177,37 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
       <Wrapper css={PostTemplate}>
         <header className="site-header">
           <div css={[outer, SiteNavMain]}>
+           
+         
             <div css={inner}>
               <SiteNav isPost post={post.frontmatter} />
             </div>
+            
+         
           </div>
         </header>
         <main id="site-main" className="site-main" css={[SiteMain, outer]}>
+           
+          
+      
+         
           <div css={inner}>
             {/* TODO: no-image css tag? */}
             <article css={[PostFull, !post.frontmatter.image && NoImage]}>
               <PostFullHeader className="post-full-header">
-                <PostFullTags className="post-full-tags">
-                  {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-                    <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
+                <PostFullTags className="post-full-tags ">
+                  {/*post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+                    <Link className={post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
                       {post.frontmatter.tags[0]}
                     </Link>
-                  )}
+                  )*/}
+                        {/* <span className="bull">&nbsp;&bull;&nbsp;</span>*/}
+                         <div className="byline-meta-content">
+                        <time className="byline-meta-date" dateTime={datetime}>
+                          {displayDatetime}
+                        </time>
+                        
+                      </div>
                 </PostFullTags>
                 <PostFullTitle className="post-full-title">{post.frontmatter.title}</PostFullTitle>
                 <PostFullCustomExcerpt className="post-full-custom-excerpt">
@@ -209,19 +224,20 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
                           </Link>
                         ))}
                       </h4>
-                      <div className="byline-meta-content">
+                    {/*  <div className="byline-meta-content">
                         <time className="byline-meta-date" dateTime={datetime}>
                           {displayDatetime}
                         </time>
                         <span className="byline-reading-time">
                           <span className="bull">&bull;</span> 20 min
                         </span>
-                      </div>
+                      </div>*/}
                     </section>
                   </section>
                 </PostFullByline>
               </PostFullHeader>
 
+          
               {post.frontmatter.image && post.frontmatter.image.childImageSharp && (
                 <PostFullImage>
                   <Img
@@ -231,12 +247,58 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
                   />
                 </PostFullImage>
               )}
-              <PostContent htmlAst={post.htmlAst} />
+<div class="">
 
+<div class="row">
+
+<div class="col-xs-12 col-md-9">
+<div className="post-main-content">
+              
+              <PostContent htmlAst={post.htmlAst} />
+            <p class="post-footer-content">  —{post.frontmatter.author.map(author => (
+                          <Link key={author.id} to={`/author/${_.kebabCase(author.id)}/`}>
+                            {author.id}
+                          </Link>
+                        ))}&nbsp;posted to&nbsp;{post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+                    <Link className={post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
+                      {post.frontmatter.tags[0]}
+                    </Link>
+                  )}
+                  </p>
+                      
+            </div>
+                </div>
+               
+
+           <div class="col-xs-12 col-md-3">
+                
+                <div class="post-sidebar__right"> {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+                    <Link className={post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
+                      {post.frontmatter.tags[0]}
+                    </Link>
+                  )}
+
+                <p>yo mama 2</p>
+                ```toc
+# This code block gets replaced with the TOC
+exclude: Table of Contents
+tight: false,
+from-heading: 2
+to-heading: 6
+```         </div>
+            </div>
+
+            </div>
+
+
+</div>
               {/* The big email subscribe modal content */}
               {config.showSubscribe && <Subscribe title={config.title} />}
             </article>
           </div>
+      
+  
+        
         </main>
 
         <ReadNext
@@ -285,7 +347,7 @@ export const NoImage = css`
 export const PostFullHeader = styled.header`
   position: relative;
   margin: 0 auto;
-  padding: 70px 170px 50px;
+  padding: 70px 0px 50px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 
@@ -318,7 +380,7 @@ const PostFullTags = styled.section`
 const PostFullCustomExcerpt = styled.p`
   margin: 20px 0 0;
   color: var(--midgrey);
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 2.3rem;
   line-height: 1.4em;
   font-weight: 300;
@@ -367,7 +429,7 @@ const PostFullByline = styled.div`
     margin: 0 0 3px;
     font-size: 1.3rem;
     line-height: 1.4em;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .post-full-byline-meta h4 a {
@@ -409,7 +471,7 @@ export const PostFullTitle = styled.h1`
   }
 
   @media (prefers-color-scheme: dark) {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
   }
 `;
 

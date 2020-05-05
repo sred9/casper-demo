@@ -34,11 +34,10 @@ export const PostFullContent = styled.section`
   margin: 0 auto;
   padding: 0 170px 6vw;
   min-height: 230px;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-size: 2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2.1rem;
   line-height: 1.6em;
   background: #fff;
-
   @media (max-width: 1170px) {
     padding: 0 11vw;
   }
@@ -259,9 +258,8 @@ export const PostFullContent = styled.section`
   h6 {
     /* color: color(var(--darkgrey) l(-5%)); */
     color: ${lighten('-0.05', colors.darkgrey)};
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
   h1 {
     margin: 0.5em 0 0.4em;
@@ -283,7 +281,7 @@ export const PostFullContent = styled.section`
     margin: 0.5em 0 0.4em;
     font-size: 3.2rem;
     line-height: 1.25em;
-    font-weight: 600;
+    font-weight: 500;
   }
   p + h2 {
     margin-top: 0.8em;
@@ -300,7 +298,7 @@ export const PostFullContent = styled.section`
     margin: 0.5em 0 0.2em;
     font-size: 2.5rem;
     line-height: 1.3em;
-    font-weight: 600;
+    font-weight: 500;
   }
   h2 + h3 {
     margin-top: 0.7em;
@@ -316,7 +314,7 @@ export const PostFullContent = styled.section`
   h4 {
     margin: 0.5em 0 0.2em;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
   }
   h2 + h4 {
     margin-top: 0.7em;
@@ -339,7 +337,8 @@ export const PostFullContent = styled.section`
     border: 0;
     /* color: var(--blue); */
     color: ${colors.blue};
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-family: 'Source Sans Pro', sans-serif;
+
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -363,7 +362,7 @@ export const PostFullContent = styled.section`
   h6 {
     margin: 0.5em 0 0.2em 0;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
   }
   @media (max-width: 800px) {
     h6 {
@@ -380,8 +379,7 @@ export const PostFullContent = styled.section`
     width: auto;
     border-spacing: 0;
     border-collapse: collapse;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.6rem;
     white-space: nowrap;
     vertical-align: top;

@@ -148,7 +148,8 @@ export const SiteNavMain = css`
   left: 0;
   z-index: 1000;
   /* background: color(var(--darkgrey) l(-5%)) */
-  background: ${darken('0.05', colors.darkgrey)};
+ /* background: ${darken('0.05', colors.darkgrey)};*/
+ background: #1f364d;
 
   @media (max-width: 700px) {
     padding-right: 0;
@@ -178,7 +179,11 @@ const SiteNavLeft = styled.div`
   padding: 10px 0 80px;
   font-weight: 500;
   letter-spacing: 0.2px;
-  text-transform: uppercase;
+  
+  font-size: 16px;
+  color: #9cb3c9;
+
+ /* text-transform: uppercase;*/
   white-space: nowrap;
 
   -ms-overflow-scrolling: touch;
@@ -212,7 +217,7 @@ const NavStyles = css`
   li a {
     position: relative;
     display: block;
-    padding: 12px 12px;
+    padding: 7px 12px;
     color: #fff;
     opacity: 0.8;
     transition: opacity 0.35s ease-in-out;
@@ -224,7 +229,7 @@ const NavStyles = css`
   }
 
   li a:before {
-    content: '';
+    content: none;
     position: absolute;
     right: 100%;
     bottom: 8px;
@@ -232,7 +237,7 @@ const NavStyles = css`
     height: 1px;
     background: #fff;
     opacity: 0.25;
-    transition: all 0.35s ease-in-out;
+   /* transition: all 0.35s ease-in-out;*/
   }
 
   li a:hover:before {
@@ -262,18 +267,27 @@ const SocialLinks = styled.div`
 
 const SubscribeButton = styled.a`
   display: block;
-  padding: 4px 10px;
+  padding: 10px 10px;
   margin: 0 0 0 10px;
-  border: #fff 1px solid;
+  border: #fff 0px solid;
   color: #fff;
-  line-height: 1em;
-  border-radius: 10px;
-  opacity: 0.8;
+  line-height: 1;
+  border-radius: 3px;
+  opacity:1;
+
+  background-image: linear-gradient(to right,#e052a0,#f15c41);
+  box-shadow: 0 0 20px rgba(0,0,0,.25);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+
+
 
   :hover {
     text-decoration: none;
     opacity: 1;
     cursor: pointer;
+    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
   }
 `;
 
