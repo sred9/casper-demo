@@ -52,16 +52,20 @@ export const AuthorListItem: React.FC<AuthorListItemProps> = props => {
               fadeIn={false}
             />
           )}
+          <section class="post-full-byline-meta"><h4 class="author-name">{props.author.id}</h4></section>
           <div className="author-info">
             <div className="bio">
               <h2>{props.author.id}</h2>
               <p>{props.author.bio}</p>
-              <p>
+             
+            </div>
+          </div>
+         <div class="author-forward">
+          <p>
                 <Link to={`/author/${_.kebabCase(props.author.id)}/`}>More posts</Link> by{' '}
                 {props.author.id}.
               </p>
-            </div>
-          </div>
+              </div>
         </div>
       )}
       <Link
@@ -117,6 +121,8 @@ const AuthorNameTooltip = styled.div`
   transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transform: translateY(6px);
   pointer-events: none;
+ 
+ 
 
   @media (max-width: 700px) {
     display: none;
@@ -130,8 +136,8 @@ const AuthorCardStyles = css`
   z-index: 600;
   display: flex;
   justify-content: space-between;
-  margin-left: -200px;
-  width: 400px;
+  margin-left: -110px;
+  width: 220px;
   font-size: 1.4rem;
   line-height: 1.5em;
   background: white;
@@ -141,7 +147,10 @@ const AuthorCardStyles = css`
   transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transform: scale(0.98) translateY(15px);
   pointer-events: none;
-  padding: 20px 20px 22px;
+  padding: 0px;
+
+  flex-direction: column;
+  
 
   :before {
     content: '';
@@ -159,7 +168,7 @@ const AuthorCardStyles = css`
 
   .author-info {
     flex: 1 1 auto;
-    padding: 0 0 0 20px;
+    padding:10px;
   }
 
   .author-info h2 {

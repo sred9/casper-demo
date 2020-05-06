@@ -191,6 +191,12 @@ const Author: React.FC<AuthorTemplateProps> = props => {
             </div>
           </div>
         </header>
+       
+       
+       
+       <div className="author-wrapper_posts row">
+         <div className="col-md-9">
+       
         <main id="site-main" css={[SiteMain, outer]}>
           <div css={inner}>
             <div css={[PostFeed]}>
@@ -200,6 +206,44 @@ const Author: React.FC<AuthorTemplateProps> = props => {
             </div>
           </div>
         </main>
+</div>
+
+<div className="col-md-3">
+
+<div className="author-sidebar_right">
+
+<div className="author-card_summary">
+
+{author.twitter && (
+                      <AuthorSocialLink className="author-follow-button author-social-link">
+                        <AuthorSocialLinkAnchor
+                          href={`https://twitter.com/${author.twitter}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Twitter
+                        </AuthorSocialLinkAnchor>
+                      </AuthorSocialLink>
+                    )}
+<div className="author-stats" css={[HiddenMobile]}>
+                      {totalCount > 1 && `${totalCount} posts`}
+                      {totalCount === 1 && '1 post'}
+                      {totalCount === 0 && 'No posts'}
+                    </div>
+
+                    {author.location && (
+                      <div className="author-location" css={[HiddenMobile]}>
+                        {author.location}
+                      </div>
+                    )}
+
+                    
+  lsadf
+</div>
+</div>
+</div>
+</div>
+
         <Footer />
       </Wrapper>
     </IndexLayout>

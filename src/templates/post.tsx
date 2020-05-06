@@ -21,6 +21,10 @@ import { inner, outer, SiteMain } from '../styles/shared';
 import config from '../website-config';
 import { AuthorList } from '../components/AuthorList';
 
+import { Facebook, Twitter, Reddit } from 'react-sharingbuttons'
+import 'react-sharingbuttons/dist/main.css'
+
+
 export interface Author {
   id: string;
   bio: string;
@@ -193,6 +197,23 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
          
           <div css={inner}>
             {/* TODO: no-image css tag? */}
+          
+          
+          <div className="row">
+        
+        <div className="col-md-1 col-xs-0">
+       
+        <div className="social-share">
+      <Facebook url={config.siteUrl + props.pathContext.slug} />
+      <Twitter url={post.frontmatter.title} shareText={post.frontmatter.title} />
+      <Reddit url={config.siteUrl + props.pathContext.slug} />
+    </div>
+       
+        </div>
+        
+        
+        
+          <div className="col-md-11 col-xs-12">
             <article css={[PostFull, !post.frontmatter.image && NoImage]}>
               <PostFullHeader className="post-full-header">
                 <PostFullTags className="post-full-tags ">
@@ -224,6 +245,7 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
                           </Link>
                         ))}
                       </h4>
+                          
                     {/*  <div className="byline-meta-content">
                         <time className="byline-meta-date" dateTime={datetime}>
                           {displayDatetime}
@@ -247,15 +269,15 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
                   />
                 </PostFullImage>
               )}
-<div class="">
+<div className="">
 
-<div class="row">
+<div className="row">
 
-<div class="col-xs-12 col-md-9">
+<div className="col-xs-12 col-md-9">
 <div className="post-main-content">
               
               <PostContent htmlAst={post.htmlAst} />
-            <p class="post-footer-content">  —{post.frontmatter.author.map(author => (
+            <p className="post-footer-content">  —{post.frontmatter.author.map(author => (
                           <Link key={author.id} to={`/author/${_.kebabCase(author.id)}/`}>
                             {author.id}
                           </Link>
@@ -270,9 +292,9 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
                 </div>
                
 
-           <div class="col-xs-12 col-md-3">
+           <div className="col-xs-12 col-md-3">
                 
-                <div class="post-sidebar__right"> {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+                <div className="post-sidebar__right"> {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
                     <Link className={post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
                       {post.frontmatter.tags[0]}
                     </Link>
@@ -295,6 +317,11 @@ to-heading: 6
               {/* The big email subscribe modal content */}
               {config.showSubscribe && <Subscribe title={config.title} />}
             </article>
+          
+          </div>
+          </div>
+          
+          
           </div>
       
   
@@ -315,7 +342,7 @@ to-heading: 6
 
 const PostTemplate = css`
   .site-main {
-    margin-top: 64px;
+    margin-top: 34px;
     background: #fff;
     padding-bottom: 4vw;
   }

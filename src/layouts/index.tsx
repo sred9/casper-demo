@@ -16,6 +16,7 @@ const IndexLayout: React.FC<IndexProps> = props => {
     <div className={props.className}>
       <Helmet>
         <link rel="icon" href={favicon} type="image/x-icon" />
+       
       </Helmet>
       <Global
         styles={css`
@@ -267,14 +268,14 @@ const IndexLayout: React.FC<IndexProps> = props => {
           }
 
           html {
-            overflow-x: hidden;
+           /* overflow-x: hidden;*/
             overflow-y: scroll;
             font-size: 62.5%;
 
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
           }
           body {
-            overflow-x: hidden;
+            /*overflow-x: hidden;*/
             color: ${lighten('-0.3', colors.midgrey)};
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
               Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

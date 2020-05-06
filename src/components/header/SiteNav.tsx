@@ -164,7 +164,7 @@ const SiteNavStyles = css`
   justify-content: space-between;
   align-items: flex-start;
   overflow-y: hidden;
-  height: 64px;
+  /*height: 48px;*/
   font-size: 1.3rem;
 `;
 
@@ -176,7 +176,7 @@ const SiteNavLeft = styled.div`
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   margin-right: 10px;
-  padding: 10px 0 80px;
+  padding: 3px 0;
   font-weight: 500;
   letter-spacing: 0.2px;
   
@@ -251,8 +251,8 @@ const SiteNavRight = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 10px 0;
-  height: 64px;
+  padding: 3px 0;
+ /* height: 48px;*/
 
   @media (max-width: 700px) {
     display: none;
@@ -272,7 +272,7 @@ const SubscribeButton = styled.a`
   border: #fff 0px solid;
   color: #fff;
   line-height: 1;
-  border-radius: 3px;
+  border-radius: 2px;
   opacity:1;
 
   background-image: linear-gradient(to right,#e052a0,#f15c41);
