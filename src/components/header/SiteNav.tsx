@@ -131,10 +131,12 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
               </a>
             )}
           </SocialLinks>
+		  <a className="donate-button">Donate</a>
           {config.showSubscribe && (
             <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
           )}
           {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
+		  
         </SiteNavRight>
       </nav>
     );

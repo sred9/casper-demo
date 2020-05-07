@@ -6,9 +6,10 @@ import styled from '@emotion/styled';
 import { colors } from './colors';
 
 import './main.css';
+import './tags.css';
 export const outer = css`
   position: relative;
-  padding: 0 5vw;
+  padding: 0 1.5vw;
 `;
 
 // Centered content container blocks
@@ -25,7 +26,8 @@ export const SiteNavMain = css`
   left: 0;
   z-index: 1000;
   /* background: color(var(--darkgrey) l(-5%)); */
-  background: ${lighten('-0.05', colors.darkgrey)};
+  /*background: ${lighten('-0.05', colors.darkgrey)};*/
+  background: #1F364D;
 `;
 
 export const SiteMain = css`
@@ -77,7 +79,7 @@ export const PostFeed = css`
   background: #fff;
 
   /* Special Template Styles */
-  padding: 40px 0 5vw;
+  padding: 30px 0 5vw;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 
@@ -117,7 +119,7 @@ export const SiteHeaderContent = styled.div`
   justify-content: center;
   align-items: center;
   padding: 6vw 3vw;
-  min-height: 200px;
+  min-height: 124px;
   max-height: 340px;
 `;
 
@@ -131,7 +133,7 @@ export const SiteHeaderStyles = css`
   background-size: cover;
 
   :before {
-    content: '';
+    content: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -142,7 +144,7 @@ export const SiteHeaderStyles = css`
     background: rgba(0, 0, 0, 0.18);
   }
   :after {
-    content: '';
+    content: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -179,8 +181,8 @@ export const SiteArchiveHeader = css`
   .site-header-content {
     position: relative;
     align-items: stretch;
-    padding: 12vw 0 20px;
-    min-height: 200px;
+    padding: 0 0 20px;
+    min-height: 174px;
     max-height: 600px;
   }
 `;
@@ -202,7 +204,7 @@ export const NoImage = css`
   }
 
   .no-image .site-header-content {
-    padding: 5vw 0 10px;
+    padding: 0vw 0 10px;
     /* border-bottom: 1px solid color(var(--lightgrey) l(+12%)); */
     border-bottom: 1px solid ${lighten('0.12', colors.lightgrey)};
   }
@@ -246,7 +248,7 @@ export const NoImage = css`
   }
 
   .site-header-background:before {
-    content: '';
+    content: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -258,7 +260,7 @@ export const NoImage = css`
   }
 
   .site-header-background:after {
-    content: '';
+    content: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -288,7 +290,7 @@ export const NoImage = css`
     }
 
     .no-image .site-header-content {
-      padding: 12vw 0 20px;
+      padding: 0 0 20px;
     }
   }
   @media (prefers-color-scheme: dark) {

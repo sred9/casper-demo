@@ -6,7 +6,7 @@ import { FluidObject } from 'gatsby-image';
 
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
-import { PostCard } from '../components/PostCard';
+import { PostCard } from '../components/PostCard_NoImage';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import {
@@ -116,26 +116,27 @@ const Author: React.FC<AuthorTemplateProps> = props => {
         )}
       </Helmet>
       <Wrapper css={NoImage}>
-        <header className="site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>
+        <header className="site-author-header site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>
           <div css={[outer, SiteNavMain]}>
             <div css={inner}>
               <SiteNav isHome={false} />
             </div>
           </div>
 
-          <div css={outer} className="site-header-background no-image">
+          <div css={outer} className="author-header-background site-header-background no-image">
             <div css={inner}>
               <SiteHeaderContent css={AuthorHeader} className="site-header-content">
                
 
                 <img
-                  style={{ marginTop: '8px' }}
+                  style={{ margin: 'auto 0'  }}
                   css={[AuthorProfileImage, AuthorProfileBioImage]}
                   src={props.data.authorYaml.avatar.childImageSharp.fluid.src}
                   alt={author.id}
                 />
-                <AuthHeaderContent className="author-header-content">
-                  <SiteTitle className="site-title">{author.id}</SiteTitle>
+                
+				<AuthHeaderContent className="author-header-content">
+                  <SiteTitle className="site-title author-title">{author.id}</SiteTitle>
                   {author.bio && <AuthorBio className="author-bio">{author.bio}</AuthorBio>}
                   <div css={AuthorMeta} className="author-meta">
                     {author.location && (
@@ -185,7 +186,9 @@ const Author: React.FC<AuthorTemplateProps> = props => {
 
                   
                 </AuthHeaderContent>
-              
+             
+			  
+			  
               </SiteHeaderContent>
               
             </div>
@@ -215,13 +218,13 @@ const Author: React.FC<AuthorTemplateProps> = props => {
 <div className="author-card_summary">
 
 {author.twitter && (
-                      <AuthorSocialLink className="author-follow-button author-social-link">
-                        <AuthorSocialLinkAnchor
+                      <AuthorSocialLink className="author-follow-wrapper author-social-link">
+                        <AuthorSocialLinkAnchor className="author-follow-button"
                           href={`https://twitter.com/${author.twitter}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Twitter
+                          Hire me
                         </AuthorSocialLinkAnchor>
                       </AuthorSocialLink>
                     )}
@@ -237,8 +240,7 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                       </div>
                     )}
 
-                    
-  lsadf
+                   
 </div>
 </div>
 </div>
@@ -334,6 +336,7 @@ const AuthorHeader = css`
   align-items: center;
   @media (max-width: 500px) {
     padding: 10px 0 0;
+	
 
     /* no image */
     padding-bottom: 10px;
@@ -409,8 +412,8 @@ const AuthorProfileBioImage = css`
   z-index: 10;
   flex-shrink: 0;
   margin: -4px 0 0;
-  width: 110px;
-  height: 110px;
+  width: 128px;
+  height: 128px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 6px;
   border-radius: 100%;
 `;

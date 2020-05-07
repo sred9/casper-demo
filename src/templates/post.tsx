@@ -295,9 +295,14 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
            <div className="col-xs-12 col-md-3">
                 
                 <div className="post-sidebar__right"> {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-                    <Link className={post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
+                    
+				
+				
+					
+					<Link className={"tag-link-logo " + post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
                       {post.frontmatter.tags[0]}
                     </Link>
+					
                   )}
 
                 <p>yo mama 2</p>

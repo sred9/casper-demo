@@ -7,7 +7,7 @@
 	/*background: #2C303A;*/
 	background: #22384E;
    
-	border-radius:	0.75rem!important; 
+	border-radius:	4px!important; 
 	    margin: 0 8px 40px 8px!important;
     padding: 20px!important;
 }
@@ -144,9 +144,19 @@ top: 8rem;
 	background: #0E2439!important;
 }
 
+/*
 .site-header-background, header.site-archive-header, .css-wumela-outer-SiteNavMain-Author {
 	background: #1F364D!important;
 }
+*/	
+.site-author-header, .author-header-background {
+	background: #1F364D!important;
+}
+
+.site-tags-header, .author-tags-background {
+	background: #1F364D!important;
+}
+
 .author-header-content h1.site-title{
 font-size: 36px;
 margin-bottom: 1rem;
@@ -218,14 +228,28 @@ a.HTML:before{
 	z-index: 100;
 	padding: 0 8vw;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .author-wrapper_posts{
+
+	padding: 0;
+}
+  
+}
+
 .css-2hkb68-SiteMain-outer-Author{
 	padding: 0!important;
 }
 
-.author-follow-button{
+.author-follow-wrapper{
+	width: 100%;	
+}
+
+.author-follow-wrapper .author-follow-button{
 	display: block;
     padding: 15px 34px!important;
-    margin: 0 0 0 10px;
+    margin: 0 0 20px 0px!important;
     border: #fff 0px solid;
     color: #fff;
     line-height: 1;
@@ -237,17 +261,103 @@ a.HTML:before{
     font-weight: 600;
 	font-size: 14px;
 	
+	width: 100%;
+	text-align: center;
+	
+	
+}
+
+.author-follow-button a{
+	color: #fff;
+}
+
+.author-follow-wrapper .author-follow-button:hover{
+    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+	text-decoration: none;
+}
+
+.donate-button{
+	
+    display: block;
+    padding: 10px 10px;
+    margin: 0 0 0 10px;
+    border: #fff 0px solid;
+    color: #fff;
+    line-height: 1;
+    border-radius: 2px;
+    opacity: 1;
+	box-shadow: inset 0 0 0 2px #274562;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+	height: 34px;
+	
+	
+}
+.donate-button:hover{
+	
+	background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+	text-decoration: none;
+	box-shadow: 0 0 20px rgba(0,0,0,.25);
 	
 }
 
 
-.author-follow-button:hover{
-    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+.tag-list{
+	align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+	
+	justify-content: center;
+}
+.tag-button{
+	
+    display: flex;
+    padding: 10px 10px;
+    margin: 4px 4px;
+    border: #fff 0px solid;
+    color: #fff;
+    line-height: 1;
+    border-radius: 2px;
+    opacity: 1;
+	box-shadow: inset 0 0 0 2px #274562;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+	height: 34px;
+	min-width: 68px;
+	justify-content: center;
+	
+	
+	
+	
+}
+.tag-button:hover{
+	
+	background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+	text-decoration: none;
+	box-shadow: 0 0 20px rgba(0,0,0,.25);
 	
 }
 
 .author-follow-button:hover a{
 	text-decoration: none;
+}
+
+.tag-header-content{
+	
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 5px 0 0 30px;
 }
 
 
@@ -256,16 +366,75 @@ a.HTML:before{
 	background-color: #274059;
 	border-radius: 3px;
 	padding: 16px;
-	margin: -4rem 2rem 0 0;
-	z-index: 1000!important;	
+	margin: -6rem 0rem 0 0;
+	z-index: 1000!important;
+	width: 87.5%;
 
 }
 
+.author-card_summary .author-stats{
+	font-size: 20px;
+}
 
+.site-archive-header .css-l5cn0z-outer-SiteNavMain-Author{
+	background: #1F364D;
+}
 
+.css-1jo8w8x-SiteMain-outer-Author{
+	padding: 0 2vw!important;
+}
 
-
-
-
-
+.author-title{
 	
+	font-size: 26px!important;
+	color: #fff;
+}
+.tag-title{
+font-size: 26px!important;
+margin-bottom: 1rem!important;
+
+}
+
+.tag-description{
+color: #9cb3c9!important;	
+}
+
+img.tag-avatar{
+	box-shadow: 0 0 0 6px hsla(0,0%,100%,0.04);
+    background: #0E2439;
+	
+	    -webkit-flex: 0 0 60px;
+    -ms-flex: 0 0 60px;
+    flex: 0 0 60px;
+    margin: 0;
+
+    border: none;
+    z-index: 10;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 128px;
+    height: 128px;
+    border-radius: 100%;
+}
+.tag-header{
+	display: flex!important;
+	flex-direction: row!important;
+	justify-content: left!important;
+	padding: 36px 24px 36px 36px!important;
+}
+
+.tag-header-content{
+	width: fit-content;
+}
+
+.sitenavmain-tags{
+	background: #0E2439!important;
+	
+}
+	
+
+.author-sidebar_right{
+	position: sticky;
+    top: 7rem;
+}

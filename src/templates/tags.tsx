@@ -4,7 +4,7 @@ import { FluidObject } from 'gatsby-image';
 
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
-import { PostCard } from '../components/PostCard';
+import { PostCard } from '../components/PostCard_NoImage';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import {
@@ -37,6 +37,7 @@ interface TagTemplateProps {
         node: {
           id: string;
           description: string;
+		 
           image?: {
             childImageSharp: {
               fluid: FluidObject;
@@ -89,18 +90,33 @@ const Tags: React.FC<TagTemplateProps> = props => {
       </Helmet>
       <Wrapper css={NoImage}>
         <header
-          className={`site-archive-header ${tagData?.node?.image ? '' : 'no-image'}`}
+          className={`site-tags-header site-archive-header ${tagData?.node?.image ? '' : 'no-image'}`}
           css={[SiteHeader, SiteArchiveHeader]}
         >
-          <div css={[outer, SiteNavMain]}>
+		
+		
+		
+          <div className="sitenavmain-tags" css={[outer, SiteNavMain]}>
             <div css={inner}>
               <SiteNav isHome={false} />
             </div>
           </div>
-          <div css={outer} className={`site-header-background ${tagData?.node?.image ? '' : 'no-image'}`}>
-            <SiteHeaderContent css={inner} className="site-header-content">
-              <SiteTitle className="site-title">{tag}</SiteTitle>
-              <SiteDescription className="site-description">
+          <div css={outer} className={`tags-header-background site-header-background ${tagData?.node?.image ? '' : 'no-image'}`}>
+            <SiteHeaderContent css={inner} className="tag-header site-header-content">
+				
+
+                
+			
+				<img className="tag-avatar"
+                  style={{ margin: 'auto 0'  }}
+                  
+                  src={tagData.node.image.childImageSharp.fluid.src}
+                 
+                />		
+<div className="tag-header-content">				
+              <SiteTitle className="tag-title site-title">{tag}</SiteTitle>
+			 
+              <SiteDescription className="tag-description site-description">
                 {tagData?.node.description ? (
                   tagData.node.description
                 ) : (
@@ -111,9 +127,16 @@ const Tags: React.FC<TagTemplateProps> = props => {
                   </>
                 )}
               </SiteDescription>
+			
+			  
+			  </div>
             </SiteHeaderContent>
           </div>
         </header>
+		
+		
+		<div className="author-wrapper_posts row">
+         <div className="col-md-9">
         <main id="site-main" css={[SiteMain, outer]}>
           <div css={inner}>
             <div css={[PostFeed]}>
@@ -123,6 +146,50 @@ const Tags: React.FC<TagTemplateProps> = props => {
             </div>
           </div>
         </main>
+		
+		</div>
+		
+		<div className="col-md-3">
+		
+		
+		
+		
+		
+		
+		
+		
+		<div className="author-sidebar_right">
+
+<div className="author-card_summary">
+
+<span className="author-follow-wrapper author-social-link css-tjm2wc-AuthorSocialLink e3kfhi10"><a className="author-follow-button" href="https://twitter.com/TryGhost" target="_blank" rel="noopener noreferrer">Write for us</a></span>
+<div class="tag-list">
+<a className="tag-button">CSS</a>
+<a className="tag-button">CSS</a>
+<a className="tag-button">CSS</a>
+<a className="tag-button">CSS</a>
+ </div>                  
+</div>
+</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</div>
+		
+		</div>
         <Footer />
       </Wrapper>
     </IndexLayout>
@@ -145,6 +212,8 @@ export const pageQuery = graphql`
               }
             }
           }
+		  
+		  
         }
       }
     }
@@ -192,3 +261,4 @@ export const pageQuery = graphql`
     }
   }
 `;
+
