@@ -107,12 +107,7 @@ const Tags: React.FC<TagTemplateProps> = props => {
 
                 
 			
-				<img className="tag-avatar"
-                  style={{ margin: 'auto 0'  }}
-                  
-                  src={tagData.node.image.childImageSharp.fluid.src}
-                 
-                />		
+					
 <div className="tag-header-content">				
               <SiteTitle className="tag-title site-title">{tag}</SiteTitle>
 			 
