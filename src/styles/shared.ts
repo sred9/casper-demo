@@ -7,6 +7,7 @@ import { colors } from './colors';
 
 import './main.css';
 import './tags.css';
+import './fixes.css';
 export const outer = css`
   position: relative;
   padding: 0 1.5vw;

@@ -2,6 +2,10 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css');
 /*@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');*/
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap');
+
+
+
+
 .post-card{
 	/*background: #2A2E35;*/
 	/*background: #2C303A;*/
@@ -438,3 +442,4 @@ img.tag-avatar{
 	position: sticky;
     top: 7rem;
 }
+
