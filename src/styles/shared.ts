@@ -10,7 +10,7 @@ import './tags.css';
 import './fixes.css';
 export const outer = css`
   position: relative;
-  padding: 0 1.5vw;
+  padding: 0 4vw;
 `;
 
 // Centered content container blocks

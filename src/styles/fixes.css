@@ -30,6 +30,10 @@
   body{
 	  overflow-x: hidden;
   }
+    .social-share, .tag-link-logo_sidebar{
+	  display: none;
+  }
+
 }
 
 /* 
@@ -41,6 +45,9 @@
   
   body{
 	  overflow-x: hidden;
+  }
+    .social-share, .tag-link-logo_sidebar{
+	  display: none;
   }
   
 }

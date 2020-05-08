@@ -26,6 +26,7 @@ module.exports = {
         path: path.join(__dirname, 'src', 'content'),
       },
     },
+	
     {
       resolve: 'gatsby-transformer-remark',
       options: {

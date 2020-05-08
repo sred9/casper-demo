@@ -268,7 +268,7 @@ const IndexLayout: React.FC<IndexProps> = props => {
           }
 
           html {
-           /* overflow-x: hidden;*/
+           /*overflow-x: hidden;*/
             overflow-y: scroll;
             font-size: 62.5%;
 
@@ -292,10 +292,10 @@ const IndexLayout: React.FC<IndexProps> = props => {
             -moz-font-feature-settings: 'liga' on;
           }
 
-          ::selection {
+          /*::selection {
             text-shadow: none;
             background: ${lighten('0.3', colors.blue)};
-          }
+          }*/
 
           hr {
             position: relative;
@@ -430,7 +430,7 @@ const IndexLayout: React.FC<IndexProps> = props => {
 
           h1 {
             margin: 0 0 0.5em 0;
-            font-size: 5.5rem;
+            font-size: 4.25rem;
             font-weight: 600;
           }
           @media (max-width: 500px) {

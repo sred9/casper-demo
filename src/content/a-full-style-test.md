@@ -5,7 +5,8 @@ image: img/testimg-cover.jpg
 author: [Ghost]
 date: 2018-09-30T07:03:47.149Z
 tags:
-  - Tests
+
+  - react
 ---
 
 Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.

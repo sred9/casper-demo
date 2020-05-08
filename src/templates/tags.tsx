@@ -107,7 +107,12 @@ const Tags: React.FC<TagTemplateProps> = props => {
 
                 
 			
-					
+				<img className="tag-avatar"
+                  style={{ margin: 'auto 0'  }}
+                  
+                  src={tagData.node.image.childImageSharp.fluid.src}
+                 
+                />		
 <div className="tag-header-content">				
               <SiteTitle className="tag-title site-title">{tag}</SiteTitle>
 			 
@@ -132,7 +137,7 @@ const Tags: React.FC<TagTemplateProps> = props => {
 		
 		<div className="author-wrapper_posts row">
          <div className="col-md-9">
-        <main id="site-main" css={[SiteMain, outer]}>
+        <main className="tag-main-wrapper" id="site-main" css={[SiteMain, outer]}>
           <div css={inner}>
             <div css={[PostFeed]}>
               {edges.map(({ node }) => (
@@ -158,14 +163,12 @@ const Tags: React.FC<TagTemplateProps> = props => {
 <div className="author-card_summary">
 
 <span className="author-follow-wrapper author-social-link css-tjm2wc-AuthorSocialLink e3kfhi10"><a className="author-follow-button" href="https://twitter.com/TryGhost" target="_blank" rel="noopener noreferrer">Write for us</a></span>
-
 <div class="tag-list">
 <a className="tag-button">CSS</a>
 <a className="tag-button">CSS</a>
 <a className="tag-button">CSS</a>
 <a className="tag-button">CSS</a>
- </div> 
-
+ </div>              
 </div>
 </div>
 		

@@ -49,7 +49,8 @@ const SiteFooter = css`
   padding-top: 20px;
   padding-bottom: 60px;
   color: #fff;
-  background: ${setLightness('0.0015', colors.darkgrey)};
+  background: #0E2439;
+  border-top: 3px solid #1f364d
 `;
 
 const SiteFooterContent = css`
@@ -58,7 +59,10 @@ const SiteFooterContent = css`
   justify-content: space-between;
   align-items: center;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  
+  max-width: calc(100% - 64px);
+  padding: 64px 0;
   a {
     color: rgba(255, 255, 255, 0.7);
   }

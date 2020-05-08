@@ -68,8 +68,8 @@ padding: 0 0px 6vw!important;
 
 .post-full-header .post-full-title{
 
-	font-size: 4.25rem;
-	padding: 2.1rem 0 0.5rem 0;
+	
+	padding: 1.25rem 0 0.5rem 0;
 }
 
 .post-full-header .post-full-byline{
@@ -186,7 +186,11 @@ color: #fff;
 		border-radius: 3px;
 	}
 
-
+.social-share .react-sharing-button__icon{
+	height: 1.35em;
+	width: 1.35em;
+	line-height: 1.35em;
+}
 
 	.react-sharing-button__text{
 		display: none;
@@ -312,7 +316,7 @@ a.HTML:before{
     display: flex;
     flex-wrap: wrap;
 	
-	justify-content: center;
+	justify-content: left;
 }
 .tag-button{
 	
@@ -443,3 +447,21 @@ img.tag-avatar{
     top: 7rem;
 }
 
+
+
+@media (min-width: 1281px) {
+  
+  .author-main-wrapper, .tag-main-wrapper{
+	padding: 0 0.8vw!important;
+}
+  
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+ .author-main-wrapper, .tag-main-wrapper{
+	padding: 0 0.8vw!important;
+}
+  
+}

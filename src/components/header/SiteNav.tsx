@@ -86,7 +86,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
         <SiteNavLeft className="site-nav-left">
           {!isHome && <SiteNavLogo />}
           <SiteNavContent css={[this.state.showTitle ? HideNav : '']}>
-            <ul css={NavStyles} role="menu">
+            <ul className="nav" css={NavStyles} role="menu">
               {/* TODO: mark current nav item - add class nav-current */}
               <li role="menuitem">
                 <Link to="/">Home</Link>
@@ -144,6 +144,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
 }
 
 export const SiteNavMain = css`
+ 
   position: fixed;
   top: 0;
   right: 0;
@@ -168,6 +169,7 @@ const SiteNavStyles = css`
   overflow-y: hidden;
   /*height: 48px;*/
   font-size: 1.3rem;
+  height: fit-content;
 `;
 
 const SiteNavLeft = styled.div`
@@ -179,7 +181,7 @@ const SiteNavLeft = styled.div`
   -webkit-overflow-scrolling: touch;
   margin-right: 10px;
   padding: 3px 0;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.2px;
   
   font-size: 16px;
@@ -192,7 +194,8 @@ const SiteNavLeft = styled.div`
 
   @media (max-width: 700px) {
     margin-right: 0;
-    padding-left: 5vw;
+    padding-left: 20px;
+	padding-right: 20px;
   }
 `;
 
@@ -304,6 +307,7 @@ const NavPostTitle = styled.span`
   opacity: 0;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   transform: translateY(175%);
+  padding-right: 20px;
 
   .dash {
     left: -25px;

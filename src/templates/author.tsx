@@ -200,7 +200,7 @@ const Author: React.FC<AuthorTemplateProps> = props => {
        <div className="author-wrapper_posts row">
          <div className="col-md-9">
        
-        <main id="site-main" css={[SiteMain, outer]}>
+        <main className="author-main-wrapper" id="site-main" css={[SiteMain, outer]}>
           <div css={inner}>
             <div css={[PostFeed]}>
               {edges.map(({ node }) => {
@@ -220,7 +220,7 @@ const Author: React.FC<AuthorTemplateProps> = props => {
 {author.twitter && (
                       <AuthorSocialLink className="author-follow-wrapper author-social-link">
                         <AuthorSocialLinkAnchor className="author-follow-button"
-                          href={`https://twitter.com/${author.twitter}`}
+                          href={"mailto:"+author.email}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -261,6 +261,7 @@ export const pageQuery = graphql`
       bio
       facebook
       location
+	  email
       profile_image {
         childImageSharp {
           fluid(maxWidth: 3720) {

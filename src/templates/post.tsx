@@ -21,6 +21,7 @@ import { inner, outer, SiteMain } from '../styles/shared';
 import config from '../website-config';
 import { AuthorList } from '../components/AuthorList';
 
+
 import { Facebook, Twitter, Reddit } from 'react-sharingbuttons'
 import 'react-sharingbuttons/dist/main.css'
 
@@ -179,7 +180,7 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
         {height && <meta property="og:image:height" content={height} />}
       </Helmet>
       <Wrapper css={PostTemplate}>
-        <header className="site-header">
+		<header className="site-header">
           <div css={[outer, SiteNavMain]}>
            
          
@@ -190,6 +191,7 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
          
           </div>
         </header>
+		
         <main id="site-main" className="site-main" css={[SiteMain, outer]}>
            
           
@@ -201,7 +203,7 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
           
           <div className="row">
         
-        <div className="col-md-1 col-xs-0">
+        <div className="col-md-1 col-xs-12">
        
         <div className="social-share">
       <Facebook url={config.siteUrl + props.pathContext.slug} />
@@ -279,10 +281,10 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
               <PostContent htmlAst={post.htmlAst} />
             <p className="post-footer-content">  —{post.frontmatter.author.map(author => (
                           <Link key={author.id} to={`/author/${_.kebabCase(author.id)}/`}>
-                            {author.id}
+                            {author.id} 
                           </Link>
                         ))}&nbsp;posted to&nbsp;{post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-                    <Link className={post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
+                    <Link className={"tag-link-logo_footer "+post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
                       {post.frontmatter.tags[0]}
                     </Link>
                   )}
@@ -299,13 +301,15 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
 				
 				
 					
-					<Link className={"tag-link-logo " + post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
+					<Link className={"tag-link-logo_sidebar " + post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
                       {post.frontmatter.tags[0]}
                     </Link>
 					
                   )}
 
                 <p>yo mama 2</p>
+				
+				
                 ```toc
 # This code block gets replaced with the TOC
 exclude: Table of Contents
@@ -395,6 +399,15 @@ export const PostFullHeader = styled.header`
   @media (max-width: 500px) {
     padding: 20px 0 35px;
   }
+  @media (min-width: 320px) and (max-width: 480px) {
+	padding: 3.75rem 0 35px;
+  
+}
+@media (min-width: 481px) and (max-width: 767px) {
+ 
+  padding: 3.75rem 0 35px;
+
+}
 `;
 
 const PostFullTags = styled.section`
@@ -410,7 +423,7 @@ const PostFullTags = styled.section`
 `;
 
 const PostFullCustomExcerpt = styled.p`
-  margin: 20px 0 0;
+  margin: 13px 0 0;
   color: var(--midgrey);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2.3rem;
@@ -431,11 +444,28 @@ const PostFullCustomExcerpt = styled.p`
 const PostFullByline = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 35px 0 0;
+  margin: 32px 0 0;
   padding-top: 15px;
   /* border-top: 1px solid color(var(--lightgrey) l(+10%)); */
   border-top: 1px solid ${lighten('0.1', colors.lightgrey)};
+	
+	@media (min-width: 481px) and (max-width: 767px) {
+ 
+	margin: 24px 0 0;
 
+}
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+	margin: 24px 0 0;
+  
+}
+	
+	
+	
+	
+	
   .post-full-byline-content {
     flex-grow: 1;
     display: flex;
@@ -505,6 +535,12 @@ export const PostFullTitle = styled.h1`
   @media (prefers-color-scheme: dark) {
     color: rgba(255, 255, 255, 0.95);
   }
+  @media (min-width: 320px) and (max-width: 480px) {
+  margin-top: 0;
+}
+@media (min-width: 481px) and (max-width: 767px) {
+margin-top: 0;
+}
 `;
 
 const PostFullImage = styled.figure`
@@ -530,6 +566,7 @@ const PostFullImage = styled.figure`
     height: 350px;
   }
 `;
+
 
 export const query = graphql`
   query($slug: String, $primaryTag: String) {
