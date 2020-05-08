@@ -158,12 +158,14 @@ const Tags: React.FC<TagTemplateProps> = props => {
 <div className="author-card_summary">
 
 <span className="author-follow-wrapper author-social-link css-tjm2wc-AuthorSocialLink e3kfhi10"><a className="author-follow-button" href="https://twitter.com/TryGhost" target="_blank" rel="noopener noreferrer">Write for us</a></span>
+
 <div class="tag-list">
 <a className="tag-button">CSS</a>
 <a className="tag-button">CSS</a>
 <a className="tag-button">CSS</a>
 <a className="tag-button">CSS</a>
- </div>                  
+ </div> 
+
 </div>
 </div>
 		
