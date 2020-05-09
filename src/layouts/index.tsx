@@ -408,12 +408,13 @@ const IndexLayout: React.FC<IndexProps> = props => {
           }
 
           a {
-            color: ${lighten('-0.05', colors.blue)};
+            color: #fff;
             text-decoration: none;
           }
 
           a:hover {
             text-decoration: underline;
+			
           }
 
           h1,

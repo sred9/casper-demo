@@ -48,7 +48,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
         <Link className="post-card-content-link" css={PostCardContentLink} to={post.fields.slug}>
           <PostCardHeader className="post-card-header">
             {post.frontmatter.tags && (
-              <PostCardPrimaryTag className="post-card-primary-tag">
+              <PostCardPrimaryTag className={"post-card-primary-tag "+post.frontmatter.tags[0]}>
                 {post.frontmatter.tags[0]}
               </PostCardPrimaryTag>
             )}
@@ -204,8 +204,8 @@ const PostCardTitle = styled.h2`
 `;
 
 const PostCardExcerpt = styled.section`
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-
+  font-family: 'Source Sans Pro', sans-serif;
+  
   @media (prefers-color-scheme: dark) {
     /* color: color(var(--midgrey) l(+10%)); */
     color: ${lighten('0.1', colors.midgrey)} !important;

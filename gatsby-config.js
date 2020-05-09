@@ -73,6 +73,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
     'gatsby-plugin-feed',
+	'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
@@ -97,5 +98,14 @@ module.exports = {
         siteSpeedSampleRate: 10,
       },
     },
+	{
+    resolve: `gatsby-plugin-nprogress`,
+    options: {
+      // Setting a color is optional.
+      color: `#4799EB`,
+      // Disable the loading spinner.
+      showSpinner: false,
+    },
+  },
   ],
 };

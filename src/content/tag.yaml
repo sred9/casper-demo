@@ -1,9 +1,17 @@
 - id: speeches
   description: Some of the greatest words ever spoken.
   image: img/speeches-cover.jpg
-  avatar: img/speeches-cover.jpg
+  avatar: /assets/html.svg
+
 
 - id: HTML
   description: Some of the greatest HMTL ever spoken.
-  image: img/speeches-cover.jpg
-  avatar: img/speeches-cover.jpg
+  image: /assets/html.svg
+  avatar: /assets/html.svg
+
+  
+- id: React
+  avatar: /assets/react.svg
+  image: /assets/react.svg
+  
+    

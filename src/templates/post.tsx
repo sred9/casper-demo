@@ -296,27 +296,29 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
 
            <div className="col-xs-12 col-md-3">
                 
-                <div className="post-sidebar__right"> {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-                    
+                <div className="post-sidebar__right"> 
 				
 				
-					
+				{post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+
+					<div className="tag-link-wrapper">
 					<Link className={"tag-link-logo_sidebar " + post.frontmatter.tags[0]} to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
                       {post.frontmatter.tags[0]}
                     </Link>
+					</div>
 					
                   )}
 
-                <p>yo mama 2</p>
 				
 				
-                ```toc
+              <p>  ```toc
 # This code block gets replaced with the TOC
 exclude: Table of Contents
 tight: false,
 from-heading: 2
 to-heading: 6
-```         </div>
+```  
+</p>       </div>
             </div>
 
             </div>
@@ -501,7 +503,7 @@ const PostFullByline = styled.div`
 
   .post-full-byline-meta h4 a:hover {
     /* color: var(--darkgrey); */
-    color: ${colors.darkgrey};
+    color: black;
   }
 
   .post-full-byline-meta .bull {

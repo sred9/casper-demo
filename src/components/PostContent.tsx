@@ -98,19 +98,20 @@ export const PostFullContent = styled.section`
 
   a {
     /* color: var(--darkgrey); */
-    color: ${colors.darkgrey};
+    color: #fff;
     word-break: break-word;
     /* box-shadow: var(--darkgrey) 0 -1px 0 inset; */
-    box-shadow: ${colors.darkgrey} 0 -1px 0 inset;
+	box-shadow: none!important;
     transition: all 0.2s ease-in-out;
+	text-decoration: none;
   }
 
   a:hover {
     /* color: var(--blue); */
-    color: ${colors.blue};
-    text-decoration: none;
+    color: #fff;
+	
+    text-decoration: underline;
     /* box-shadow: var(--blue) 0 -1px 0 inset; */
-    box-shadow: ${colors.blue} 0 -1px 0 inset;
   }
 
   strong,

@@ -42,11 +42,19 @@ const About: React.FC = () => (
     <Wrapper css={PageTemplate}>
       <header className="site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>
         <div css={[outer, SiteNavMain]}>
+		
           <div css={inner}>
             <SiteNav isHome={false} />
           </div>
         </div>
       </header>
+	  	  <div class="about-header-background site-header-background">
+		  <div class="about-header">
+		  <p class="about-bio">Hello, I'm Sreehas.</p>
+		  <p class="about-bio">I created.</p>
+		  </div>
+		  </div>
+
       <main id="site-main" className="site-main" css={[SiteMain, outer]}>
         <div css={inner}>
           <article className="post page" css={[PostFull, NoImage]}>

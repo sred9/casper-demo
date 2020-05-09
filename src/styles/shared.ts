@@ -6,7 +6,8 @@ import styled from '@emotion/styled';
 import { colors } from './colors';
 
 import './main.css';
-import './tags.css';
+import './tags.scss';
+import './misc.scss';
 import './fixes.css';
 export const outer = css`
   position: relative;

@@ -37,7 +37,8 @@ interface TagTemplateProps {
         node: {
           id: string;
           description: string;
-		 
+		 id: avatar;
+          avatar: string;
           image?: {
             childImageSharp: {
               fluid: FluidObject;
@@ -106,11 +107,14 @@ const Tags: React.FC<TagTemplateProps> = props => {
 				
 
                 
+				
+				
+				
 			
 				<img className="tag-avatar"
                   style={{ margin: 'auto 0'  }}
                   
-                  src={tagData.node.image.childImageSharp.fluid.src}
+                  src={tagData.node.avatar}
                  
                 />		
 <div className="tag-header-content">				
@@ -205,6 +209,7 @@ export const pageQuery = graphql`
         node {
           id
           description
+		  avatar
           image {
             childImageSharp {
               fluid(maxWidth: 3720) {

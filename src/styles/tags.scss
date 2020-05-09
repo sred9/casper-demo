@@ -1,0 +1,71 @@
+ 
+ .tag-link-logo_sidebar{
+	background-repeat: no-repeat;
+	height: 19px;
+	background-size: 19px;
+    width: auto;
+    background-position-y: center;
+	background-position-x: left;
+	padding-left: 2.5rem;
+	
+}
+.tag-link-wrapper{
+	margin-bottom: 1.5rem;
+	border-bottom: 2px dotted rgba(31,54,77,.6);
+	padding: 10px 0;
+
+
+}
+
+.tag-link-logo_footer{
+	background-repeat: no-repeat;
+    padding-left: 3rem;
+	margin-left: 0.35rem;
+	height: 23px;
+	background-size: 23px;
+    width: auto;
+    background-position-y: center;
+	background-position-x: left;
+}
+
+.post-card-header{ 
+	.React{
+	color: #00d8ff;
+	}
+	.HTML{
+	color: #e34f26;
+	}
+	.CSS{
+	color: #264de4;
+	}
+	.Javascript{
+	color: #f7df1e;
+	}
+
+}
+a.Tests{
+	background-image: url(https://alligator.io/images/logos/gatsby-logo.svg);
+	
+}
+
+a.HTML{
+	background-image: url(https://hackr.io/tutorials/html-5/logo-html-5.svg);
+}
+
+a.CSS{
+	background-image: url(https://alligator.io/images/logos/gatsby-logo.svg);
+}
+
+a.Javascript{
+	background-image: url(https://alligator.io/images/logos/gatsby-logo.svg);
+}
+
+a.React{
+	background-image: url(/assets/react.svg);
+}
+a.Bootstrap{
+	background-image: url(https://alligator.io/images/logos/gatsby-logo.svg);
+}
+a.Bulma{
+	background-image: url(https://alligator.io/images/logos/gatsby-logo.svg);
+}

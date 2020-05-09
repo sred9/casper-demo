@@ -1,10 +1,13 @@
 ---
 title: 'Gettysburg Address'
 author: [Ghost, Another Author]
-tags: []
+
 image: img/demo1.jpg
 date: '1863-11-19T10:00:00.000Z'
 draft: false
+tags:
+ ['HTML']
+excerpt: Where to find this project on GitHub.
 ---
 
 Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.

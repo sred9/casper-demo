@@ -181,7 +181,7 @@ const SiteNavLeft = styled.div`
   -webkit-overflow-scrolling: touch;
   margin-right: 10px;
   padding: 3px 0;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.2px;
   
   font-size: 16px;
